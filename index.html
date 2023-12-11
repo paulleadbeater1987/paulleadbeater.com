@@ -1,126 +1,215 @@
+
 <!DOCTYPE html>
+<html land="en">
 
     <head>
-
-        <meta charset="utf-8">
+		<!-- Required Meta Tags -->
+        <meta charset="utf-8">        
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Paul Leadbeater</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+		<!-- SEO Tags -->
+		<title>Paul Leadbeater</title>
+        <meta name="description" content="Freelance software and website developer">
+		<!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
-        <link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />	
-    
+		<!-- Website CSS -->
+		<link rel="stylesheet" href="css/index.css" />
     </head>
 	
     <body>
-	
-		<header class="row">
+		<header>
 
-			<div id="div_Header_Logo" class="div_Header col-md-3">
-				<a href="#" id="link_Header_Logo">
-					<img src="img/headerLogo.jpg" alt="Header Logo" id="img_Header_Logo" />
-				</a>
-			</div>
-			
-			<div id="div_Header_Menu" class="div_Header col-md-9">
-				<div class="row" style="height: 100%;">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<!-- Logo -->
+				<div class="container-xxl">
+					<a href="#">
+						<img src="img/headerLogo.jpg" alt="Header Logo" class="h-75" />
+					</a>
 
-					<div id="div_HeaderMenu_About" class="div_Header_Menu col-md-3">About</div>
-					<div id="div_HeaderMenu_Services" class="div_Header_Menu col-md-3 offset-md-1">Services</div>					
-					<div id="div_HeaderMenu_Contact" class="div_Header_Menu col-md-3 offset-md-1">Contact</div>
+					<!-- Toggle button for mobile nav -->
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navgation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
+					<!-- Navbar links -->
+					<div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+						<ul class="navbar-nav">
+							<li class="nav-item m-2">
+								<a class="w-100 h-100 p-4 btn btn-lg btn-danger" href="#about">About</a>
+							</li>
+							<li class="nav-item m-2">
+								<a class="w-100 h-100 p-4 btn btn-lg btn-danger" href="#services">Services</a>
+							</li>
+							<li class="nav-item m-2">
+								<a class="w-100 h-100 p-4 btn btn-lg btn-danger" href="#codingskills">Coding Skills</a>
+							</li>
+							<li class="nav-item m-2">
+								<a class="w-100 h-100 p-4 btn btn-lg btn-danger" href="#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
+			</nav>
 
 		</header>
 
-		<div id="div_Hero">
-			<h1>Paul Leadbeater</h1>
-			<h3>Offering good prices on websites, from development to deployment.</h3>
-		</div>
+		<section id="hero" class="container-xxl text-center mt-3">
+			<h1 class="text-dark my-4">Paul Leadbeater</h1>
+			<h2 class="my-4">PRACTICAL websites, LOW prices</h2>
+			<h3 class="text-dark my-4">Design, Development & Deployment</h3>
+		</section>
 		
-		<div id="div_Main_About" class="div_Main">
-
+		<section id="about" class="container mt-2 p-5 text-center bg-light">
 			<h2>About</h2>
 			
-			<div id="div_About_Text">
-				<p>I'm a software and website developer with around 5 years experience. I can develop and
-				deploy basic websites like this one in a week. If you need a simple website that lists your
-				skills and services and provides a contact form for people to get in touch with you, I can set that
-				up very quickly, keeping you in the loop throughout the design process. I have a minimalist approach
-				and specialise in quick turnaround, but I'm also willing to discuss larger projects. I'm
-				offering good prices to help build my portfolio. Contact me, describe what you'd
-				like on your website and we can discuss a price. Starting rate for development,
-				domain name and hosting (keeping your website online) for 1 year is £200.</p>
+			<div>
+				<p>I'm a software and website developer with around 7 years experience. I can put a website like this together very quickly.</p>
+				<p>As you can see from this website, I have a minimalist approach. I'm passionate about what I do and specialise in quick turnaround.</p>
+				<p>I'm a good collaborator and will happily keep you in the loop as much as you wish, throughout the process.</p>
+				<p>Approximate starting rate for development, domain name and hosting (keeping your website online) for 1 year IS ONLY €200.</p>
+				<p>Take advantage of my LOW prices NOW while I'm still building my portfolio.</p>
 			</div>
-
-		</div>
+		</section>
 		
-		<div id="div_Main_Services" class="div_Main">
+		<section id="services" class="container-xxl mt-5 text-center">
+			<h2 class="mb-3">Services</h2>
 
-			<h2>Services</h2>
-
-			<p>Here is a basic cost estimate. Quotes vary and will be provided following discussion.</p>
+			<p class="my-4">This is a basic cost estimate. Quotes vary and will be provided following discussion.</p>
 			
-			<div id="div_Services_Text">
+			<div>
 				<ul>
-					<li>Single page web site - £200</li>
-					<li>Multi page web site - £250</li>
-					<li>Multi page web site with contact form - £300</li>
-					<li>Multi page web site with contact form and custom email - £350</li>
+					<li class="my-2">Single page web site - <strong>€50</strong></li>
+					<li class="my-2">Multi page web site - <strong>€100</strong></li>
+					<li class="my-2">Multi page web site with contact form - <strong>€250</strong></li>
+					<li class="my-2">Multi page web site with contact form and your own custom email address - <strong>€200</strong></li>
 				</ul>
 			</div>
+		</section>
 
-		</div>
+		<section id="codingskills" class="container-xxl mt-5 p-5 text-center bg-light">
+			<h2 class="mb-3">Coding Skills</h2>
 
-		<div id="div_Main_Contact" class="div_Main">
-
-			<form class="col-md-10 offset-md-1" method="post" name="emailform" action="form-to-email.php">
-				<div class="row">
-
-					<h2>Contact</h2>
-					
-					<div class="div_FormInput col-md-4" id="div_FormInput">
-						<input class="formInput" type="text" name="website" placeholder="website" />
+			<div class="row">
+				<div class="card col-md-4 col-lg">
+					<div class="card-body p-4">
+						<h3 class="card-title">Frontend</h3>
+						<ul>
+							<li>HTML 5</li>
+							<li>CSS 3</li>
+							<li>LESS</li>
+							<li>Tailwind</li>
+							<li>Bootstrap 5</li>
+							<li>JavaScript</li>
+							<li>TypeScript</li>
+							<li>Node.js</li>
+							<li>Vue.js</li>
+							<li>Angular</li>
+							<li>Razor</li>
+						</ul>
 					</div>
-					<div class="div_FormInput col-md-4">
-						<input class="formInput" type="text" name="name" placeholder="Your Name" />
-					</div>
-					<div class="div_FormInput col-md-4">
-						<input class="formInput" type="text" name="phoneNumber" placeholder="Phone Number" />
-					</div>
-					<div class="div_FormInput col-md-4">
-						<input class="formInput" type="text" name="emailAddress" placeholder="Email Address" />
-					</div>
-					<div class="div_FormInput col-md-12">
-						<textarea class="formInput" name="message" placeholder="Insert your message"></textarea>
-					</div>
-					<div id="div_Submit" class="col-md-3">
-						<input id="submit" class="formInput" type="submit" name="submit" value="Submit" />
-					</div>
-
 				</div>
-			</form>
-
-		</div>
-		
-		<footer>
-
-			<hr />
-			<div id="div_Footer_Text">
-				
+				<div class="card col-md-4 col-lg">
+					<div class="card-body p-4">
+						<h3 class="card-title">Backend</h3>
+						<ul>
+							<li>ASP.NET (Web Forms, Core, MVC)</li>
+							<li>C#</li>
+							<li>LINQ</li>
+							<li>Testing (NUnit)</li>
+							<li>PHP</li>
+							<li>Laravel</li>
+							<li>Shopify Liquid</li>
+							<li>VBA</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card col-md-4 col-lg">
+					<div class="card-body p-4">
+						<h3 class="card-title">Data</h3>
+						<ul>
+							<li>SQL</li>
+							<li>SSRS</li>
+							<li>Entity Framework</li>
+							<li>ADO</li>
+							<li>Ajax</li>
+							<li>JSON</li>
+							<li>XML</li>
+							<li>Umbraco</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card col-md-4 col-lg">
+					<div class="card-body p-4">
+						<h3 class="card-title">Version Control</h3>
+						<ul>
+							<li>Git</li>
+							<li>SVN</li>
+							<li>TFS</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card col-md-4 col-lg">
+					<div class="card-body p-4">
+						<h3 class="card-title">Other</h3>
+						<ul>
+							<li>WordPress</li>
+							<li>Shopify</li>
+							<li>MailChimp</li>
+							<li>Klaviyo</li>
+							<li>SendInBlue</li>
+						</ul>
+					</div>
+				</div>
 			</div>
+		</section>
 
+		<section id="contact" class="container-xxl my-5 text-center">
+			<form class="col-md-10 offset-md-1" method="post" name="myemailform" action="form-to-email.php">
+
+				<div class="row justify-content-between">
+					<h2 class="mb-4">Contact</h2>
+					
+					<div class="d-none">
+						<input type="text" name="website" placeholder="website" />
+					</div>
+					<div class="col-sm-4">
+						<input type="text" name="name" placeholder="Your Name" class="p-2 w-100" />
+					</div>
+					<div class="col-sm-4">
+						<input type="tel" name="phonenumber" placeholder="Phone Number" class="p-2 w-100" />
+					</div>
+					<div class="col-sm-4">
+						<input type="email" name="emailAddress" placeholder="Email Address" class="p-2 w-100" />
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col">
+						<textarea name="message" placeholder="Insert your message" rows="5" class="w-100 p-3"></textarea>
+					</div>
+				</div>
+					
+				<div class="row mt-4">
+					<div class="col">
+						<input type="submit" name="submit" value="Submit" class="btn btn-lg btn-outline-danger" />
+					</div>
+				</div>
+				
+			</form>
+		</section>
+		
+		<footer class="container-xxl mt-5 pt-5">
+			<p class="text-secondary text-center">@ 2022 Proudly developed and powered by Paul Leadbeater without the help of WordPress, SqaureSpace, Shopify or any other tools</p>
 		</footer>
-			
-		<!-- jQuery Library -->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<!-- Bootstrap -->
+
+		<!-- Bootstrap JS -->
 		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-		<!-- Website jQuery -->
+		
+		<!-- Website JS -->
 		<script type="text/javascript" src="js/index.js"></script>
 
     </body>

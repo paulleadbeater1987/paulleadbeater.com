@@ -1,118 +1,19 @@
 
-html, body {
-	font-family: 'Archivo', sans-serif !important;
-	font-size: 1rem;
+nav {
+	background-color: darkred;
 }
 
-/*Header*/
-
-header {
-	height: 100%;
+h2 {
+    color: darkred;
 }
 
-ul {
-	list-style: none;
-	padding: 0;
+ul { 
+    list-style: none;
+    padding: 0% !important;
 }
 
-.div_FormInput { margin: 16px 0 16px 0; }
-
-textarea {
-    text-align: left !important;
-    padding: 1%;
-}
-
-h1 {
-    font-size: 3rem !important;
-    margin-bottom: 2% !important;
-}
-
-h3 { font-size: 1.5rem !important; }
-
-h1, h2, h3 { width: 100%; }
-
-.div_Header {}
-
-#div_Header_Logo {
-	height: 100%;
-	margin-top: 1%;
-	text-align: center;
-}
-
-#img_Header_Logo{
-	height: 100%;
-}
-
-#div_Header_Menu {
-	text-align: center;
-	width: 100%;
-}
-
-.div_Header_Menu {
-	background-color: crimson;
+/* .btn-danger:hover {
 	color: #fff;
-	margin-top: 1%;
-	padding: 36px;
-}
-
-.link_HeaderMenu{
-	color: #fff;
-	display: block;
-    	margin-top: 38px;
-}
-
-#div_Hero {
-    margin: 32px 0 32px 0;
-    text-align: center;
-}
-
-/*Main*/
-
-.div_Main {
-	display: none;
-    text-align: center;
-    margin: 0 auto;
-    width: 84%;
-}
-
-.div_FormInput{
-	margin: 16px 0 16px 0;
-}
-
-.formInput {
-	text-align: center;
-	width: 100%;
-}
-
-#div_Submit{
-	margin: 0 auto;
-}
-
-#div_Main_About {
-    width: 64%;
-}
-
-#div_About_Text{
-	text-align: justify;
-}
-
-#div_Main_Services {}
-
-#div_Main_Contact {}
-
-#submit{
-	cursor: pointer;
-}
-
-/*Footer*/
-
-footer {}
-
-#div_Footer_Text {
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    width: 84%;
-}
-
-#div_FormInput { display: none !important; }
+    background-color: darkred;
+    border-color: darkred;
+} */
