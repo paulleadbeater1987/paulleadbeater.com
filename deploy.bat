@@ -9,5 +9,5 @@ WinSCP.com /command ^
   "open ftp://%USER%:%PASS%@%HOST%" ^
   "lcd %LOCAL_DIR%" ^
   "cd %REMOTE_DIR%" ^
-  "put -delete *" ^
+  "put -neweronly *" ^
   "exit"
