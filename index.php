@@ -52,10 +52,10 @@
 		<h2>About</h2>
 		<div>
 			<p>I'm a software and website developer with around 7 years experience. I can put a website like this together very quickly.</p>
-			<p>As you can see from this website, I have a minimalist approach. I'm passionate about what I do and specialise in quick turnaround.</p>
-			<p>I'm a good collaborator and will happily keep you in the loop as much as you wish, throughout the process.</p>
-			<p>Approximate starting rate for development, domain name and hosting (keeping your website online) for 1 year IS ONLY €200.</p>
-			<p>Take advantage of my LOW prices NOW while I'm still building my portfolio.</p>
+			<p>As you can see, I have a minimalist approach. I'm passionate about user experience and specialise in quick turnaround.</p>
+			<p>I'm a good communicator and will happily keep you in the loop as much as you wish, throughout the process.</p>
+			<p>Approx starting rate for design, development, domain name and hosting (keeping your website online) for 1 year is €100.</p>
+			<p>Take advantage of professional delivery at low prices while I'm still building my portfolio.</p>
 		</div>
 	</section>
 

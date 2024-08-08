@@ -1,54 +1,75 @@
 <?php
 
-if(!isset($_POST['submit']))
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require_once __DIR__ . '/../phpmailer/src/Exception.php';
+require_once __DIR__ . '/../phpmailer/src/PHPMailer.php';
+require_once __DIR__ . '/../phpmailer/src/SMTP.php';
+
+# Message vars
+$msg = '';
+$msgClass = '';
+
+if (filter_has_var(INPUT_POST, 'submit'))
 {
-	//This page should not be accessed directly. Need to submit the form.
-	echo "error; you need to submit the form!";
-}
-$name = $_POST['name'];
-$visitor_phonenumber = $_POST['phonenumber'];
-$visitor_email = $_POST['email'];
-$message = $_POST['message'];
+  $name = htmlspecialchars($_POST['name']);
+  $email = htmlspecialchars($_POST['email']);
+  $message = htmlspecialchars($_POST['message']);
+  
+  # Check required fields
+  if (!empty($name) && !empty($email) && !empty($message)) {
 
-$email_from = 'noreply@paulleadbeater.com';
-$email_subject = "New Copy Hood Enquiry";
-$email_body = "You have received a new message from \n
-  Name: $name.\n
-  Tel: $visitor_phonenumber.\n
-  Email: $visitor_email.\n".
-      "Here is the message:\n $message".
-    
-$to = 'paul_leadbeater@live.co.uk';
-$headers = "From: noreply@paulleadbeater.com \r\n";
-$headers .= "Reply-To: $visitor_email \r\n";
+    // Validate email
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+      $msg = 'Please use a valid email';
+      $msgClass = 'alert-danger';
+    } else {
+      
+      $mail = new PHPMailer(true);
+      
+      try {
+        //Server settings
+        $mail->isSMTP();                           // Send using SMTP
+        $mail->Host       = 'mail.privateemail.com';   // Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                  // Enable SMTP authentication
+        $mail->Username   = 'info@soloketo.com';   // SMTP username
+        $mail->Password   = 'h0meLessKet0!';       // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
+        $mail->Port       = 465;                   // TCP port to connect to
 
-//Send the email!
-mail($to,$email_subject,$email_body,$headers);
+        //Recipients
+        $mail->setFrom('info@soloketo.com', 'Solo Keto');
+        $mail->addAddress('info@soloketo.com', 'Solo Keto');    // Add a recipient
+        $mail->addReplyTo($email, $name);
 
-//done. redirect to thank-you page.
-header('Location: index.html');
+        // Content
+        $mail->isHTML(true);                       // Set email format to HTML
+        $mail->Subject = 'Solo Keto';
+        $mail->Body    = '<h2>Solo Keto</h2>
+                          <h4>Name</h4><p>'.$name.'</p>
+                          <h4>Email</h4><p>'.$email.'</p>
+                          <h4>Message</h4><p>'.$message.'</p>';
+        $mail->AltBody = 'Name: '.$name."\n".'Email: '.$email."\n".'Message: '.$message;
 
-// Function to validate against any email injection attempts
-function IsInjected($str)
-{
-  $injections = array('(\n+)',
-              '(\r+)',
-              '(\t+)',
-              '(%0A+)',
-              '(%0D+)',
-              '(%08+)',
-              '(%09+)'
-              );
-  $inject = join('|', $injections);
-  $inject = "/$inject/i";
-  if(preg_match($inject,$str))
-    {
-    return true;
+        if ($mail->send()) {
+          $msg = 'Your email has been sent';
+          $msgClass = 'alert-success';
+        } else {
+          $msg = 'Your email has NOT been sent. Error: ' . $mail->ErrorInfo;
+          $msgClass = 'alert-danger';
+        }
+      } catch (Exception $e) {
+        $msg = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
+        $msgClass = 'alert-danger';
+      }
+    }
+  } else {
+    # Empty boxes
+    $msg = 'Please fill in ALL fields';
+    $msgClass = 'alert-danger';
   }
-  else
-    {
-    return false;
-  }
 }
-   
-?> 
+
+?>

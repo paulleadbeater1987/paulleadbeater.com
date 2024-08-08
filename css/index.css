@@ -8,26 +8,6 @@ body {
     background-size: contain;
 }
 
-header {
-    text-align: center;
-}
-
-nav {
-    background-image: linear-gradient(140deg, #D22B2B 0%, darkred 50%, black 75%);
-}
-
-#headerLogo {
-    height: 75px;
-}
-
-h1 { color: #fff !important; }
-
-header h2 {
-    color: #fff !important;
-    font-style: italic;
-    font-weight: lighter;
-}
-
 h2 { color: darkred; }
 
 ul {
@@ -45,18 +25,16 @@ section.bg-light {
     width: 80%;
 }
 
-.hero h3.one {
+.hero h3 {
     margin: 0 1.75%;
+}
+.hero h3.one {
     width: 74%;
 }
-
 .hero h3.two {
-    margin: 0 1.75%;
     width: 35%;
 }
-
 .hero h3.three {
-    margin: 0 1.75%;
     width: 22%;
 }
 
