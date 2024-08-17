@@ -1,0 +1,14 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect index.php to the root URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.php[^\s]* [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+# If the request is for a directory
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# If the request is for a file
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+)$ /$1 [L]

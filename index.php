@@ -8,7 +8,7 @@
 
 	<section id="services" class="container-xxl my-3 text-center bg-light">
 		<h2 class="mb-3">Services</h2>
-		<p class="my-4">Here's a cost estimate. Prices confirmed following discussion.</p>
+		<p class="my-4">The following is a cost estimate. Prices confirmed following discussion.</p>
 		<div id="services_inner">
 			<div class="service_option">
 				<img src="img/headerLogo.jpg" alt="Logo" class="serviceLogo" />
