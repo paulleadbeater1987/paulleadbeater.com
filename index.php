@@ -150,7 +150,8 @@
 	</section>
 
 	<section id="contact" class="container-xxl my-3 text-center bg-light">
-		<form class="col-md-10 offset-md-1" method="post" name="myemailform" action="send_email.php">
+		
+		<form class="col-md-10 offset-md-1" id="contact_form" method="post">
 
 			<div class="row justify-content-between">
 				<h2 class="mb-4">Contact</h2>
