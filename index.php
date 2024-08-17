@@ -160,22 +160,18 @@
 					<input type="text" name="website" placeholder="website" />
 				</div>
 
-				<div class="col-sm-4">
+				<div class="col-sm-6">
 					<input id="contact_name" type="text" name="name" placeholder="Your Name"  value="<?php echo isset($_POST['name']) ? $name : ''; ?>" class="p-2 w-100" />
 				</div>
-
-				<div class="col-sm-4">
-					<input id="contact_tel" type="tel" name="tel" placeholder="Tel"  value="<?php echo isset($_POST['tel']) ? $tel : ''; ?>" class="p-2 w-100" />
-				</div>
 				
-				<div class="col-sm-4">
+				<div class="col-sm-6">
 					<input id="contact_email" type="email" name="email" placeholder="Email Address"  value="<?php echo isset($_POST['email']) ? $email : ''; ?>" class="p-2 w-100" />
 				</div>
 			</div>
 
 			<div class="row mt-4">
 				<div class="col">
-					<textarea name="contact_message" placeholder="Insert your message" rows="5" class="w-100 p-3"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+					<textarea id="contact_message" placeholder="Insert your message" name="message" rows="5" class="w-100 p-3"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
 				</div>
 			</div>
 		
