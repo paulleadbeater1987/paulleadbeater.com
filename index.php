@@ -1,4 +1,5 @@
 <?php require_once 'components/header/header.php'; ?>
+<?php require_once 'functions/send_email.php'; ?>
 	
 	<section id="servicesHero" class="hero container-xxl text-center my-3">
 		<h3 class="my-4 bg-slogans three">Design</h3>
@@ -149,7 +150,7 @@
 	</section>
 
 	<section id="contact" class="container-xxl my-3 text-center bg-light">
-		<form class="col-md-10 offset-md-1" method="post" name="myemailform" action="form-to-email.php">
+		<form class="col-md-10 offset-md-1" method="post" name="myemailform" action="send_email.php">
 
 			<div class="row justify-content-between">
 				<h2 class="mb-4">Contact</h2>
@@ -157,22 +158,31 @@
 				<div class="d-none">
 					<input type="text" name="website" placeholder="website" />
 				</div>
+
 				<div class="col-sm-4">
-					<input type="text" name="name" placeholder="Your Name" class="p-2 w-100" />
+					<input id="contact_name" type="text" name="name" placeholder="Your Name"  value="<?php echo isset($_POST['name']) ? $name : ''; ?>" class="p-2 w-100" />
 				</div>
+
 				<div class="col-sm-4">
-					<input type="tel" name="phonenumber" placeholder="Phone Number" class="p-2 w-100" />
+					<input id="contact_tel" type="tel" name="tel" placeholder="Tel"  value="<?php echo isset($_POST['tel']) ? $tel : ''; ?>" class="p-2 w-100" />
 				</div>
+				
 				<div class="col-sm-4">
-					<input type="email" name="emailAddress" placeholder="Email Address" class="p-2 w-100" />
+					<input id="contact_email" type="email" name="email" placeholder="Email Address"  value="<?php echo isset($_POST['email']) ? $email : ''; ?>" class="p-2 w-100" />
 				</div>
 			</div>
 
 			<div class="row mt-4">
 				<div class="col">
-					<textarea name="message" placeholder="Insert your message" rows="5" class="w-100 p-3"></textarea>
+					<textarea name="contact_message" placeholder="Insert your message" rows="5" class="w-100 p-3"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
 				</div>
 			</div>
+		
+			<?php if ($msg != ''): ?>
+				<div class="alert <?php echo $msgClass; ?>">
+					<?php echo $msg; ?>
+				</div>
+			<?php endif; ?>
 				
 			<div class="row mt-4">
 				<div class="col">
