@@ -1,10 +1,28 @@
 <?php require_once 'components/header/header.php'; ?>
 <?php require_once 'functions/send_email.php'; ?>
 	
-	<section id="servicesHero" class="hero container-xxl text-center my-3">
+	<section id="aboutHero" class="hero container-xxl text-center my-3">
 		<h3 class="my-4 bg-slogans three">Design</h3>
 		<h3 class="my-4 bg-slogans three">Development</h3>
 		<h3 class="my-4 bg-slogans three">Deployment</h3>
+	</section>
+
+	<section id="about" class="container my-3 p-5 text-center bg-light">
+		<h2>About</h2>
+		<div>
+			<p>Wtih almost 10 years' experience developing and designing software and website applications, I can put a website like this together very quickly.</p>
+			<p>The website you're looking at is an of my minimalist and creative design skills. I'm passionate about keeping user experiences simple, and therefore specialise in quick turnaround.</p>
+			<p>I'm a proactive and articulate communicator and will happily keep you in the loop as much or as little as you like, throughout the process.</p>
+			<p>Approx starting rate for my services is £100. Free quotations provided upon discussion.</p>
+			<p>Take advantage of professional delivery at low prices while I'm still building my portfolio.</p>
+		</div>
+	</section>
+
+	<section id="servicesHero" class="hero container-xxl text-center my-3">
+		<div id="divHero">
+			<h3 class="my-4 bg-slogans two">Professional Delivery</h3>
+			<h3 class="my-4 bg-slogans two">Affordable Prices</h3>
+		</div>
 	</section>
 
 	<section id="services" class="container-xxl my-3 text-center bg-light">
@@ -39,24 +57,6 @@
 				</ul>
 				<span><strong>€200</strong></span>
 			</div>
-		</div>
-	</section>
-	
-	<section id="aboutHero" class="hero container-xxl text-center my-3">
-		<div id="divHero">
-			<h3 class="my-4 bg-slogans two">Professional Delivery</h3>
-			<h3 class="my-4 bg-slogans two">Affordable Prices</h3>
-		</div>
-	</section>
-
-	<section id="about" class="container my-3 p-5 text-center bg-light">
-		<h2>About</h2>
-		<div>
-			<p>I'm a software and website developer with around 7 years experience. I can put a website like this together very quickly.</p>
-			<p>As you can see, I have a minimalist approach. I'm passionate about user experience and specialise in quick turnaround.</p>
-			<p>I'm a good communicator and will happily keep you in the loop as much as you wish, throughout the process.</p>
-			<p>Approx starting rate for design, development, domain name and hosting (keeping your website online) for 1 year is €100.</p>
-			<p>Take advantage of professional delivery at low prices while I'm still building my portfolio.</p>
 		</div>
 	</section>
 

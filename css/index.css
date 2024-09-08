@@ -1,11 +1,7 @@
 
-html{
-    font-family: 'Times New Roman', Times, serif;
-}
-
-body {
+html, body {
     background-image: url("../img/background-white.jpg");
-    background-size: contain;
+    font-family: cursive;
 }
 
 h2 { color: darkred; }
@@ -16,6 +12,7 @@ ul {
 }
 
 section.bg-light {
+    background-image: url("../img/hero-background-white.jpg");
     border-radius: 10%;
     padding: 2%;
     width: 80%;
@@ -47,9 +44,30 @@ section.bg-light {
     display: inline-block;
     margin: 1%;
     padding: 1%;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.bg-slogans:hover {
+    box-shadow: 
+        0 -10px 15px -5px rgba(255, 69, 0, 0.8),
+        0 -20px 30px -10px rgba(255, 140, 0, 0.7),
+        0 -30px 45px -15px rgba(255, 165, 0, 0.6);
+    cursor: crosshair;
+}
+
+.bg-slogans.three:hover{
+    width: 24% !important;
+}
+.bg-slogans.two:hover{
+    width: 40% !important;
+}
+.bg-slogans.one:hover{
+    width: 80% !important;
 }
 
 section#services {
+    /* background-image: linear-gradient(140deg, #fff 10%, mintcream 90%); */
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -61,7 +79,7 @@ section#services {
 }
 
 .service_option {
-    background: radial-gradient(640px at 7% 17%, #FFD700 20%, #000080 90%);
+    background: radial-gradient(640px at 7% 17%, #FFFFFF 20%, #ADD8E6 90%);
     border-radius: 5%;
     display: inline-block;
     margin: 0 1%;

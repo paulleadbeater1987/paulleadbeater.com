@@ -1,0 +1,13 @@
+
+footer {
+    background-image: linear-gradient(140deg, #ab2323 0%, darkred 50%, black 75%);
+    box-shadow: 
+        0 -10px 15px -5px rgba(255, 69, 0, 0.8),
+        0 -20px 30px -10px rgba(255, 140, 0, 0.7),
+        0 -30px 45px -15px rgba(255, 165, 0, 0.6);
+    color: lightgray;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    padding-top: 1%;
+}
